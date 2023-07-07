@@ -5,25 +5,16 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import com.example.RegisterLogin.Config.SecurityConfig;
 
-
-
-
-
-@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+@SpringBootApplication
 @Import(SecurityConfig.class)
-@ComponentScan(basePackages={"com.example.RegisterLogin"})
-@EntityScan(basePackages = "com.example.RegisterLogin.Entity")
-@EnableJpaRepositories(basePackages = "com.example.RegisterLogin.Repo")
-
-public class RegisterLoginApplication {
+@EntityScan({"com.example.RegisterLogin.Entity"})
+public class RegisterLogin {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RegisterLoginApplication.class, args);
+		SpringApplication.run(RegisterLogin.class, args);
 		System.out.println("Started..........");
 	}
-
 }

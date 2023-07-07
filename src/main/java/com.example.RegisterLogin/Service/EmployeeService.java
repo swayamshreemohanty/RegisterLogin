@@ -6,5 +6,6 @@ import com.example.RegisterLogin.payload.response.LoginResponse;
 
 public interface EmployeeService {
     String addEmployee(EmployeeDTO employeeDTO);
-    LoginResponse loginEmployee(LoginDTO loginDTO);     
+
+    LoginResponse loginEmployee(LoginDTO loginDTO);
 }

@@ -20,8 +20,6 @@ public class AppConfig {
         return emf;
     }
 
-
-
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
